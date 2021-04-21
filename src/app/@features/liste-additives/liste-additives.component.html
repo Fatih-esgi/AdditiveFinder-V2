@@ -4,13 +4,13 @@
         <ion-icon name="infinite-outline"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="0">
-        <ion-icon name="happy-outline"></ion-icon>
+        <ion-icon name="happy-outline" class="greenButton"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="1">
-        <ion-icon name="sad-outline"></ion-icon>
+        <ion-icon name="sad-outline" class="orangeButton"></ion-icon>
       </ion-segment-button>
       <ion-segment-button value="2">
-        <ion-icon name="skull-outline"></ion-icon>
+        <ion-icon name="skull-outline" class="redButton"></ion-icon>
       </ion-segment-button>
     </ion-segment>
 <ion-list>
@@ -35,7 +35,7 @@
 <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content
       loadingSpinner="bubbles"
-      loadingText="Loading more data...">
+      loadingText="chargement...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>
