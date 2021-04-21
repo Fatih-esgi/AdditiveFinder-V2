@@ -12,12 +12,14 @@ import { SuperTabsModule } from '@ionic-super-tabs/angular';
 import { IonicModule } from '@ionic/angular';
 import { SearchAdditiveComponent } from './@features/search-additive/search-additive.component';
 import { ListeAdditivesComponent } from './@features/liste-additives/liste-additives.component';
+import { ColorPipe } from './@shared/pipes/color.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchAdditiveComponent,
-    ListeAdditivesComponent
+    ListeAdditivesComponent,
+    ColorPipe
   ],
   imports: [
     BrowserModule,
