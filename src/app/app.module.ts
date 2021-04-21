@@ -10,10 +10,12 @@ import { environment } from 'src/environments/environment';
 
 import { SuperTabsModule } from '@ionic-super-tabs/angular';
 import { IonicModule } from '@ionic/angular';
+import { SearchAdditiveComponent } from './@features/search-additive/search-additive.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchAdditiveComponent
   ],
   imports: [
     BrowserModule,
