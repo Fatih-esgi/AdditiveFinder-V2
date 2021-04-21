@@ -8,6 +8,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 
+import { SuperTabsModule } from '@ionic-super-tabs/angular';
+import { IonicModule } from '@ionic/angular';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +20,9 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    SuperTabsModule.forRoot(),
+    IonicModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
