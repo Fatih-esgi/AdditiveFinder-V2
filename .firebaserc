@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "additivelist": {
+      "hosting": {
+        "additiveFinderV2": [
+          "additivelist"
+        ]
+      }
+    }
+  }
+}
