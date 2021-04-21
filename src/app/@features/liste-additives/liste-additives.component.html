@@ -14,8 +14,7 @@
     </ion-segment-button>
   </ion-segment>
   <ion-list class="ion-no-padding">
-    <ion-item detail="true" detail-icon="caret-forward-circle" [routerLink]="'../detail/' + item.id"
-      *ngFor="let item of (items$|async)?.slice(min, max)">
+    <ion-item detail="true" detail-icon="caret-forward-circle" *ngFor="let item of (items$|async)?.slice(min, max)" [routerLink]="'../detail/' + item.id.toString()">
       <ion-thumbnail [className]="'ion-no-margin ion-color-' + (item?.level|color)">
         {{item.id}}
       </ion-thumbnail>

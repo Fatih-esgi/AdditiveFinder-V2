@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from 'src/app/@services/firestore.service';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-liste-additives',
@@ -8,7 +9,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./liste-additives.component.scss']
 })
 export class ListeAdditivesComponent implements OnInit {
-  items$;
+  items$: Observable<any[]>;
+  displayIsSelected$ = this._fireStore.displayIsSelected$;
   max = 10;
   min = 0;
 
@@ -17,13 +19,13 @@ export class ListeAdditivesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.items$ = this._fireStore.items$
+    this.items$ = this._fireStore.getItem$();
   }
   filterBy($event)  {
     
     const {detail:  {value = null} = {}} = $event;
     // syntaxiquement identique: ({detail:  {value = null} = {}} = $event) === ($event.detail.value);
-    this.items$ = this._fireStore.items$.pipe(
+    this.items$ = this.items$.pipe(
       map(items =>  {
         console.log(value);
         if (value === null || value === 'all' ) return items;

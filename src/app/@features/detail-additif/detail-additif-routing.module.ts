@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListeAdditivesComponent } from './liste-additives.component';
+import { DetailAdditifComponent } from './detail-additif.component';
 
 const routes: Routes = [
-  {
-    path:"",
-    component: ListeAdditivesComponent
-  },
-  
+  {path:"",component:DetailAdditifComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ListeAdditivesRoutingModule { }
+export class DetailAdditifRoutingModule { }

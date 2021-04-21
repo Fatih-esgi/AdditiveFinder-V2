@@ -1,34 +1,3 @@
-<ion-header>
-  <ion-toolbar> 
-    <ion-title>{{title}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <super-tabs>
-    <super-tabs-toolbar slot="bottom">
-      <super-tab-button>
-        <ion-icon name="search"></ion-icon>
-        <ion-label>rechercher</ion-label>    
-      </super-tab-button>
-      <super-tab-button>
-        <ion-icon name="list"></ion-icon>
-        <ion-label>Liste</ion-label>    
-      </super-tab-button>
-      <super-tab-button>
-        <ion-icon name="heart"></ion-icon>
-        <ion-label>Favoris</ion-label>    
-      </super-tab-button>
-    </super-tabs-toolbar>
-    <super-tabs-container>
-      <super-tab>
-          <ion-nav [root]="linkToSearch" [rootParams]="{ hello: 'world' }"></ion-nav>
-      </super-tab>
-      <super-tab>
-          <ion-nav [root]="linkToListe" [rootParams]="{ hello: 'world' }"></ion-nav>
-      </super-tab>
-      <super-tab>
-          <ion-nav [root]="linkToFav" [rootParams]="{ hello: 'world' }"></ion-nav>
-      </super-tab>
-    </super-tabs-container>
-  </super-tabs>
-</ion-content>
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

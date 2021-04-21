@@ -19,7 +19,7 @@ import { ColorPipe } from './@shared/pipes/color.pipe';
     AppComponent,
     SearchAdditiveComponent,
     ListeAdditivesComponent,
-    ColorPipe
+    ColorPipe,
   ],
   imports: [
     BrowserModule,
