@@ -7,33 +7,29 @@
   <super-tabs>
     <super-tabs-toolbar slot="bottom">
       <super-tab-button>
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="search"></ion-icon>
         <ion-label>Page #1</ion-label>    
       </super-tab-button>
       <super-tab-button>
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="list"></ion-icon>
         <ion-label>Page #2</ion-label>    
       </super-tab-button>
       <super-tab-button>
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="heart"></ion-icon>
         <ion-label>Page #3</ion-label>    
       </super-tab-button>
     </super-tabs-toolbar>
     <super-tabs-container>
       <super-tab>
-        <ion-content>
-          Page #1
-        </ion-content>
+          <ion-nav [root]="linkToSearch" [rootParams]="{ hello: 'world' }"></ion-nav>
       </super-tab>
       <super-tab>
-        <ion-content>
-          Page #2
-        </ion-content>
+          <ion-nav [root]="linkToListe" [rootParams]="{ hello: 'world' }"></ion-nav>
       </super-tab>
       <super-tab>
-        <ion-content>
-          Page #3
-        </ion-content>
+ 
+          <ion-nav [root]="linkToFav" [rootParams]="{ hello: 'world' }"></ion-nav>
+
       </super-tab>
     </super-tabs-container>
   </super-tabs>
