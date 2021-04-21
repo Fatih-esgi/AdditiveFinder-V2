@@ -13,6 +13,7 @@ import { IonicModule } from '@ionic/angular';
 import { SearchAdditiveComponent } from './@features/search-additive/search-additive.component';
 import { ListeAdditivesComponent } from './@features/liste-additives/liste-additives.component';
 import { ColorPipe } from './@shared/pipes/color.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,12 @@ import { ColorPipe } from './@shared/pipes/color.pipe';
     IonicModule,
     SuperTabsModule.forRoot(),
     IonicModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
