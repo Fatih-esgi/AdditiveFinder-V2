@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from 'src/app/@services/firestore.service';
 
 @Component({
   selector: 'app-liste-additives',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-additives.component.scss']
 })
 export class ListeAdditivesComponent implements OnInit {
+  items$;
 
-  constructor() { }
+  constructor(
+    private _fireStore : FirestoreService
+  ) { }
 
   ngOnInit(): void {
+    this.items$ = this._fireStore.items$
   }
   filterBy($event){}
   loadData($event){}
