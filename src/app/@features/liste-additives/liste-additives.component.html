@@ -13,8 +13,8 @@
         <ion-icon name="skull-outline"></ion-icon>
       </ion-segment-button>
     </ion-segment>
-<!-- <ion-list>
-    <ion-item class="ion-no-padding" detail="true" detail-icon="caret-forward-circle" *ngFor="let post of (post$|async)?.slice(min,max)" [routerLink]="'../detail/' + post.id.toString()">
+<ion-list>
+    <!-- <ion-item class="ion-no-padding" detail="true" detail-icon="caret-forward-circle" *ngFor="let post of (post$|async)?.slice(min,max)" [routerLink]="'../detail/' + post.id.toString()">
         <ion-grid>
             <ion-row>
                 <ion-col size="3" class="ion-no-padding ion-no-margin">
@@ -30,8 +30,8 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-    </ion-item>
-</ion-list> -->
+    </ion-item> -->
+</ion-list>
 <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content
       loadingSpinner="bubbles"

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListeAdditiveComponent } from './liste-additive.component';
+import { ListeAdditivesComponent } from './liste-additives.component';
 
-describe('ListeAdditiveComponent', () => {
-  let component: ListeAdditiveComponent;
-  let fixture: ComponentFixture<ListeAdditiveComponent>;
+describe('ListeAdditivesComponent', () => {
+  let component: ListeAdditivesComponent;
+  let fixture: ComponentFixture<ListeAdditivesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListeAdditiveComponent ]
+      declarations: [ ListeAdditivesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListeAdditiveComponent);
+    fixture = TestBed.createComponent(ListeAdditivesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
