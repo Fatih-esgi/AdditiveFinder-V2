@@ -1,1 +1,23 @@
-<p>search-additive works!</p>
+<ion-content color="medium">
+    <ion-grid>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col size="6">
+                    <ion-row class="searchContainer">
+                        <ion-col size="2" class="ion-no-margin ion-no-padding">
+                            <ion-text  color="light" class="ion-text-end">
+                                <h1 class="ion-no-margin ion-no-padding">E</h1>
+                            </ion-text>
+                        </ion-col>
+                        <ion-col size="10" class="ion-no-margin ion-no-padding">
+                            <ion-input class="ion-no-margin ion-no-padding ion-align-self-end" #searchInput type="text" name="searchAditive" placeholder="333" maxlength=4></ion-input>
+                        </ion-col>
+                    </ion-row>
+      
+                        <ion-button [disabled]="searchInput?.value?.length <=2" shape="round" fill="outline" color="light" [routerLink]="'../detail/' + searchInput?.value?.toString()">
+                            <ion-icon name="search"></ion-icon>
+                            Chercher
+                        </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>            
+</ion-content>

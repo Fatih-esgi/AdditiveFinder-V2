@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ListeAdditiveRoutingModule } from './liste-additive-routing.module';
 import { ListeAdditiveComponent } from './liste-additive.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ListeAdditiveComponent } from './liste-additive.component';
   ],
   imports: [
     CommonModule,
-    ListeAdditiveRoutingModule
+    ListeAdditiveRoutingModule,
+    IonicModule
   ]
 })
 export class ListeAdditiveModule { }

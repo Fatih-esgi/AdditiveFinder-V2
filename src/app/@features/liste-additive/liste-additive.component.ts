@@ -12,4 +12,6 @@ export class ListeAdditiveComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  filterBy($event){}
+  loadData($event){}
 }
